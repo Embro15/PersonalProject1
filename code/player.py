@@ -14,7 +14,6 @@ class Player(pygame.sprite.Sprite):
         self.speed = 500
         self.collision_sprites = collision_sprites
 
-
     def load_images(self):
         self.frames = {'left': [], 'right': [], 'up': [], 'down': []}
 
@@ -38,7 +37,6 @@ class Player(pygame.sprite.Sprite):
         self.hitbox_rect.y += self.direction.y * self.speed * dt
         self.collision('vertical')
         self.rect.center = self.hitbox_rect.center
-
 
     def collision(self, direction):
         for sprite in self.collision_sprites:
